@@ -14,13 +14,31 @@
     <style>
         .carousel-item img {
             object-fit: cover;
-            height: 300px;
+            width: 100%;
+            height: 400px; /* Fixed height for consistent image size */
+            max-height: 100%;
         }
-        .carousel-indicators [data-bs-target] {
-            background-color: #000;
+
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px; /* Smaller height for mobile devices */
+            }
         }
+
+        @media (min-width: 1200px) {
+            .carousel-item img {
+                height: 500px; /* Larger height for large screens */
+            }
+        }
+
         .product-section {
             margin-top: 50px;
+        }
+
+        h2 {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
         }
     </style>
 </head>
@@ -55,10 +73,9 @@
         <div class="container px-4 px-lg-5">
             <!-- Smartphones Section -->
             <div class="product-section">
-                <h2 class="fw-bolder mb-4 text-center">Smartphones</h2>
+                <h2>Smartphones</h2>
                 <div id="smartphoneCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <!-- Carousel Items for Smartphones -->
                         <div class="carousel-item active">
                             <img src="img/smartphone1.jpg" class="d-block w-100" alt="Smartphone 1">
                         </div>
@@ -68,8 +85,7 @@
                         <div class="carousel-item">
                             <img src="img/smartphone3.jpg" class="d-block w-100" alt="Smartphone 3">
                         </div>
-                        <!-- Repeat for all smartphone images up to smartphone9 -->
-                        <!-- Add more items up to smartphone9 -->
+                        <!-- Continue with all smartphone images up to smartphone9 -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#smartphoneCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -84,10 +100,9 @@
 
             <!-- Smartwatches Section -->
             <div class="product-section">
-                <h2 class="fw-bolder mb-4 text-center">Smartwatches</h2>
+                <h2>Smartwatches</h2>
                 <div id="smartwatchCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <!-- Carousel Items for Smartwatches -->
                         <div class="carousel-item active">
                             <img src="img/smartwatch1.jpg" class="d-block w-100" alt="Smartwatch 1">
                         </div>
@@ -97,8 +112,7 @@
                         <div class="carousel-item">
                             <img src="img/smartwatch3.jpg" class="d-block w-100" alt="Smartwatch 3">
                         </div>
-                        <!-- Repeat for all smartwatch images up to smartwatch9 -->
-                        <!-- Add more items up to smartwatch9 -->
+                        <!-- Continue with all smartwatch images up to smartwatch9 -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#smartwatchCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -113,10 +127,9 @@
 
             <!-- Laptops Section -->
             <div class="product-section">
-                <h2 class="fw-bolder mb-4 text-center">Laptops</h2>
+                <h2>Laptops</h2>
                 <div id="laptopCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <!-- Carousel Items for Laptops -->
                         <div class="carousel-item active">
                             <img src="img/laptop1.jpg" class="d-block w-100" alt="Laptop 1">
                         </div>
@@ -126,8 +139,7 @@
                         <div class="carousel-item">
                             <img src="img/laptop3.jpg" class="d-block w-100" alt="Laptop 3">
                         </div>
-                        <!-- Repeat for all laptop images up to laptop9 -->
-                        <!-- Add more items up to laptop9 -->
+                        <!-- Continue with all laptop images up to laptop9 -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#laptopCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -142,10 +154,9 @@
 
             <!-- Cameras Section -->
             <div class="product-section">
-                <h2 class="fw-bolder mb-4 text-center">Cameras</h2>
+                <h2>Cameras</h2>
                 <div id="cameraCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <!-- Carousel Items for Cameras -->
                         <div class="carousel-item active">
                             <img src="img/camera1.jpg" class="d-block w-100" alt="Camera 1">
                         </div>
@@ -155,8 +166,7 @@
                         <div class="carousel-item">
                             <img src="img/camera3.jpg" class="d-block w-100" alt="Camera 3">
                         </div>
-                        <!-- Repeat for all camera images up to camera9 -->
-                        <!-- Add more items up to camera9 -->
+                        <!-- Continue with all camera images up to camera9 -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#cameraCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -168,14 +178,13 @@
                     </button>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Babito Technologies 2024</p>
+            <p class="m-0 text-center text-white">© Babito Technologies 2024</p>
         </div>
     </footer>
 
